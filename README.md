@@ -34,6 +34,6 @@ unimol_tools
 
 numba
 
-Download the required checkpoints from Google Drive
-https://drive.google.com/drive/folders/169fLSJgCHAyYPRm8PXgQ4qg-IHx_ZbeO?usp=drive_link
+Download the required checkpoints from [Google Drive](https://drive.google.com/drive/folders/1qWRXV_uTdDhfmh3xznA78hjgcBSW12jo?usp=drive_link)
+
 

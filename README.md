@@ -1,3 +1,7 @@
+1. Code of SAEKP
+
+2. Environment:
+
 pytorch
 
 torch-scatter
@@ -33,7 +37,7 @@ pandas
 unimol_tools
 
 numba
-
+3. Model
 Download the required checkpoints from [Google Drive](https://drive.google.com/drive/folders/1qWRXV_uTdDhfmh3xznA78hjgcBSW12jo?usp=drive_link)
 
 

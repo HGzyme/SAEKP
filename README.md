@@ -14,30 +14,30 @@
 
     torch-geometric
 
-esm
+    esm
 
-lmdb
+    lmdb
 
-SentencePiece
+    SentencePiece
 
-typed-argument-parser
+    typed-argument-parser
 
-xgboost
+    xgboost
 
-rdkit
+    rdkit
 
-tqdm
+    tqdm
 
-tensorboardx
+    tensorboardx
 
-lmdb
+    lmdb
 
-pandas
+    pandas
 
-unimol_tools
+    unimol_tools
 
-numba
+    numba
 3. Model
-Download the required checkpoints from [Google Drive](https://drive.google.com/drive/folders/1qWRXV_uTdDhfmh3xznA78hjgcBSW12jo?usp=drive_link)
+    Download the required checkpoints from [Google Drive](https://drive.google.com/drive/folders/1qWRXV_uTdDhfmh3xznA78hjgcBSW12jo?usp=drive_link)
 
 

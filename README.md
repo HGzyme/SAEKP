@@ -2,17 +2,17 @@
 
 2. Environment:
 
-pytorch
+    pytorch
 
-torch-scatter
+    torch-scatter
 
-torch-sparse
+    torch-sparse
 
-torch-cluster
+    torch-cluster
 
-torch-spline-conv
+    torch-spline-conv
 
-torch-geometric
+    torch-geometric
 
 esm
 

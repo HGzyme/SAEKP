@@ -2,15 +2,6 @@
 
 # SAEKP
 
-<!-- Add buttons here -->
-![Python](https://img.shields.io/badge/python-3.7-blue)
-![PyTorch](https://img.shields.io/badge/PyTorch-supported-orange)
-![Model](https://img.shields.io/badge/model-SAEKP-green)
-![License](https://img.shields.io/badge/license-GPL--3.0-informational)
-
-<!-- Describe your project in brief -->
-**Feel free to contact us via email at yuhanid147@gmail.com if you encounter any issues or have any questions.**
-
 **Introduction of SAEKP**
 
 Prediction of enzyme kinetic parameters is essential for enzyme design, enzyme engineering, and metabolic pathway optimization. However, the limited generalization ability of existing prediction tools across diverse enzymatic systems restricts their practical applications. Here, we introduce SAEKP, a unified framework based on pretrained language models for predicting enzyme kinetic parameters, including enzyme turnover number (*k*<sub>cat</sub>), Michaelis constant (*K*<sub>m</sub>), and catalytic efficiency (*k*<sub>cat</sub> / *K*<sub>m</sub>), from protein sequences and substrate structures. A two-layer framework derived from SAEKP, namely EF-SAEKP, has also been proposed for robust *k*<sub>cat</sub> prediction by incorporating environmental factors, including pH and temperature. In addition, representative re-weighting methods have been systematically explored to reduce prediction errors in high-value prediction tasks. SAEKP and EF-SAEKP have been applied to enzyme discovery and directed evolution tasks, enabling the identification of new enzymes and enzyme mutants with improved activity. SAEKP provides a useful computational tool for enzyme kinetic analysis, enzyme mining, and enzyme engineering.
@@ -101,7 +92,7 @@ SAEKP/
 
 * <b>Peking University Shenzhen Graduate School, Shenzhen, 518055, China:</b><br/>
 
-| Jiahe Qiu | Huaxiang Deng | Jiahui He | Jay D. Keasling | Xiaozhou Luo |
+| Jiahe Qiu | Zongyin Lin | Ke-Wei Chen | Yundong Wu |
 |:------:|:-------------:|:---------:|:---------------:|:------------:|
 
 

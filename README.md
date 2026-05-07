@@ -55,13 +55,13 @@ SAEKP/
 
   - (1). Download the SAEKP package
 
-        git clone https://github.com/Luo-SynBioLab/SAEKP
+        git clone https://github.com/HGzyme/SAEKP
         cd SAEKP
 
   - (2). Create and activate the conda environment
 
-        conda create -n SAEKP python=3.7
-        conda activate SAEKP
+        conda create -n SAEKP_env python=3.10
+        conda activate SAEKP_env
 
   - (3). Install required Python packages
 

@@ -1,0 +1,27 @@
+--index-url https://pypi.tuna.tsinghua.edu.cn/simple
+--extra-index-url https://download.pytorch.org/whl/cu118
+-f https://data.pyg.org/whl/torch-2.5.1+cu118.html
+
+torch==2.5.1
+torchvision
+torchaudio
+
+torch-scatter
+torch-sparse
+torch-cluster
+torch-spline-conv
+torch-geometric
+
+esm
+lmdb
+sentencepiece
+typed-argument-parser
+xgboost
+rdkit
+tqdm
+tensorboardx
+pandas
+numpy
+transformers
+scikit-learn
+openpyxl

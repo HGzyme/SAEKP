@@ -7,6 +7,7 @@
 
 **Here is the framework of SAEKP**
 
+        Download the required checkpoints from [Google Drive](https://drive.google.com/drive/folders/1qWRXV_uTdDhfmh3xznA78hjgcBSW12jo)
 
 # Demo-Preview
 
@@ -34,7 +35,7 @@
 # Prerequisites
 [(Back to top)](#table-of-contents)
 
-Recommended directory structure:
+Recommended:
 
 ```text
 SAEKP/

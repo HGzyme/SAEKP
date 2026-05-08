@@ -32,7 +32,7 @@
 - [Contribute](#contribute)
 - [Citation](#citation)
 
-# Prerequisites
+# Required Documents
 [(Back to top)](#table-of-contents)
 
 Recommended:
@@ -49,21 +49,25 @@ SAEKP/
 
 - **To perform prediction using the deep learning model, run the following commands in the terminal:**
 
-  - (1). Download the SAEKP package
+  - (1). Download documents
 
         git clone https://github.com/HGzyme/SAEKP
         cd SAEKP
 
-  - (2). Create and activate the conda environment
+  - (2). Create environment
 
         conda create -n SAEKP_env python=3.10
         conda activate SAEKP_env
-
-  - (3). Install required Python packages
-
         pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
         pip install -r requirements.txt
+    
+  - (3). Inference
 
+        conda create -n SAEKP_env python=3.10
+        conda activate SAEKP_env
+        pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+        pip install -r requirements.txt
+    
 - Example for predicting enzyme kinetic parameters from sequences and substrate by SAEKP:
 
 

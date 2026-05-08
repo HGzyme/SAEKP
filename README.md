@@ -76,8 +76,8 @@ SAEKP/
 
 * <b>Peking University Shenzhen Graduate School, Shenzhen, 518055, China:</b><br/>
 
-| Jiahe Qiu | Zongyin Lin | Ke-Wei Chen | Yundong Wu |
-|:------:|:-------------:|:---------:|:---------------:|:------------:|
+| Jiahe Qiu | Zongyin Lin | Ke-Wei Chen | Qiang Wang | Tian-Yu Sun | Li Yuan | Xian Zhang | Yonghong Tian | Yun-Dong Wu |
+|:------:|:-------------:|:---------:|:---------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
 
 
 # Citation

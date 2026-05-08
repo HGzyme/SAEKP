@@ -9,9 +9,9 @@
 
         Download the required checkpoints from [Google Drive](https://drive.google.com/drive/folders/1qWRXV_uTdDhfmh3xznA78hjgcBSW12jo)
 
-# Demo-Preview
+# Usage Recommendations
 
-- **For users who want to know what to expect in this project, as follows:**
+- **Who to Expect from This Project:**
 
   - (1). Predict *k*<sub>cat</sub> by sequences and substrate.
   - (2). Predict *K*<sub>m</sub> by sequences and substrate.
@@ -25,7 +25,7 @@
 # Table of contents
 
 - [SAEKP](#SAEKP)
-- [Demo-Preview](#demo-preview)
+- [Usage Recommendations](#Usage Recommendations)
 - [Table of contents](#table-of-contents)
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)

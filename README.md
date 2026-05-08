@@ -25,7 +25,7 @@
 # Table of contents
 
 - [SAEKP](#SAEKP)
-- [Usage Recommendations](#Usage Recommendations)
+- [Usage Recommendations](#usage-recommendations)
 - [Table of contents](#table-of-contents)
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)

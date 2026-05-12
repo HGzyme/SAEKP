@@ -1,2 +1,2 @@
-    Download the required checkpoints from [Google Drive](https://drive.google.com/drive/folders/159rbGXBJEd_DTERQKWx8lOkyO7OiDPHe)
+    Download the required lmda from [Google Drive](https://drive.google.com/drive/folders/159rbGXBJEd_DTERQKWx8lOkyO7OiDPHee)
 

@@ -63,10 +63,8 @@ SAEKP/
     
   - (3). Inference
 
-        conda create -n SAEKP_env python=3.10
         conda activate SAEKP_env
-        pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-        pip install -r requirements.txt
+        python infer.py
     
 - Example for predicting enzyme kinetic parameters from sequences and substrate by SAEKP:
 

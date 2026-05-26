@@ -17,10 +17,11 @@
   - (2). Predict *K*<sub>m</sub> by sequences and substrate.
   - (3). Predict *K*<sub>i</sub> by sequences and substrate.
 
-| Input_v1 | Input_v2 | Model | Output |
+| Input_1 | Input_2 | Model | Output |
 |--|--|--|--|
 | QWER | C(=O)(C(F)(F)F)O | SAEKP for *k*<sub>cat</sub> | 0.01 s<sup>-1</sup> |
 | QWER | C(=O)(C(F)(F)F)O | SAEKP for *K*<sub>m</sub> | 1.50 mM |
+| QWER | C(=O)(C(F)(F)F)O | SAEKP for *K*<sub>i</sub> | 3.50 mM |
 
 # Table of contents
 

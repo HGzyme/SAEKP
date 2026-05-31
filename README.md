@@ -61,6 +61,10 @@ SAEKP/
         conda activate SAEKP_env
         pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
         pip install -r requirements.txt
+        conda create -n SAEKP_env_2 python=3.10
+        conda activate SAEKP_env_2
+        pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+        pip install -r requirements_2.txt
     
   - (3). Inference
 

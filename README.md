@@ -40,8 +40,10 @@ Recommended:
 
 ```text
 SAEKP/
-├── scripts/
+├── script/
 ├── model/
+├── data/
+├── result/
 └── ...
 ```
 
@@ -66,9 +68,10 @@ SAEKP/
         pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
         pip install -r requirements_2.txt
     
-  - (3). Inference
+  - (3). Infer
 
         conda activate SAEKP_env
+        cd script
         python infer.py
     
 - Example for predicting enzyme kinetic parameters from sequences and substrate by SAEKP:

@@ -4,6 +4,8 @@
 
 **Introduction of SAEKP**
 
+        For predicting enzyme kinetic parameters.
+
 
 **Here is the framework of SAEKP**
 

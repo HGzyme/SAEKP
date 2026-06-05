@@ -1,0 +1,13 @@
+datasets,dlkcat,unikp,catapro,saekp_abla,saekp
+all,0.46759,0.65418,0.47157,0.71907,0.7269
+mutant_vs_important_site_equal,0.35701,0.54577,0.36948,0.67322,0.70228
+test_out_of_distribution_99,0.1508,0.39436,0.35704,0.45582,0.46678
+test_out_of_distribution_90,0.08728,0.35231,0.32631,0.41664,0.42565
+test_out_of_distribution_80,0.0516,0.33,0.30713,0.39206,0.40001
+test_out_of_distribution_70,0.0328,0.30854,0.29591,0.37321,0.38719
+test_out_of_distribution_60,-0.01749,0.26791,0.25915,0.32525,0.34424
+test_out_of_distribution_50,-0.03589,0.24108,0.21519,0.28543,0.30817
+test_out_of_distribution_40,-0.05233,0.20157,0.17006,0.24687,0.26476
+test_out_of_distribution_30,-0.06288,0.1642,0.12096,0.19888,0.23163
+test_out_of_distribution_20,-0.02398,0.16601,0.13109,0.19824,0.23113
+test_out_of_distribution_10,-0.02398,0.16601,0.13109,0.19824,0.23113

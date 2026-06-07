@@ -6,7 +6,6 @@
 
         For predicting enzyme kinetic parameters.
 
-
 **Here is the framework of SAEKP**
 
         Download the required checkpoints from [Google Drive](https://drive.google.com/drive/folders/1qWRXV_uTdDhfmh3xznA78hjgcBSW12jo)
@@ -75,6 +74,12 @@ SAEKP/
         conda activate SAEKP_env
         cd script
         python infer.py
+
+  - (4). Evaluate
+
+        conda activate SAEKP_env
+        cd script
+        python evaluate.py
     
 - Example for predicting enzyme kinetic parameters from sequences and substrate by SAEKP:
 

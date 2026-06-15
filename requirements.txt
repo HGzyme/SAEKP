@@ -25,3 +25,5 @@ numpy
 transformers
 scikit-learn
 openpyxl
+unimol_tools
+numba

@@ -6,7 +6,7 @@
 
         For predicting enzyme kinetic parameters.
 
-**Here is the framework of SAEKP**
+**Framework of SAEKP**
 
         Download the required checkpoints from [Google Drive](https://drive.google.com/drive/folders/1qWRXV_uTdDhfmh3xznA78hjgcBSW12jo)
 

@@ -81,7 +81,7 @@ SAEKP/
         cd script
         python infer.py
     
-- Example for predicting enzyme kinetic parameters from sequences and substrate (by input 1_input_for_test.csv and output 2_output_for_test.csv:
+- Example for predicting enzyme kinetic parameters (by input 1_input_for_test.csv and output 2_output_for_test.csv:
 
 
 # Contribute

@@ -79,7 +79,7 @@ SAEKP/
 
         conda activate SAEKP_env
         cd script
-        python evaluate.py
+        python infer.py
     
 - Example for predicting enzyme kinetic parameters from sequences and substrate by SAEKP:
 

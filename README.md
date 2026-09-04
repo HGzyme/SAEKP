@@ -8,7 +8,7 @@
 
 **Framework of SAEKP**
 
-        Download the required checkpoints and dataset from [Google Drive](https://drive.google.com/drive/folders/1qWRXV_uTdDhfmh3xznA78hjgcBSW12jo?usp=drive_link)
+        Download the required checkpoints and dataset from [Google Drive](https://drive.google.com/drive/folders/1qWRXV_uTdDhfmh3xznA78hjgcBSW12jo?usp=sharing)
 
 # Usage Recommendations
 

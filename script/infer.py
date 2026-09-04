@@ -62,7 +62,21 @@ model_t5 = T5EncoderModel.from_pretrained(model_path).to(cuda_device2)
 model_t5.half()
 
 def load_model(model_path):
-    model = xgboost.XGBRegressor(tree_method='hist', predictor='cpu_predictor')
+    """同时兼容 JSON、MODEL 和 PT 模型。"""
+
+    # torch.save(xgb_model, path) 保存的 PT 模型
+    if model_path.lower().endswith(".pt"):
+        return torch.load(
+            model_path,
+            map_location="cpu",
+            weights_only=False
+        )
+
+    # XGBoost 原生 JSON/MODEL 模型
+    model = xgboost.XGBRegressor(
+        tree_method="hist",
+        predictor="cpu_predictor"
+    )
     model.load_model(model_path)
     return model
 import subprocess
@@ -715,47 +729,69 @@ import glob
 import os
 
 def expand_model_paths(model_suffix_map):
+    """
+    支持 model_suffix_map 中的 value 可以是目录或文件。
+    如果是目录，则自动展开其中所有 .json / .model 文件，
+    并以文件名作为后缀。
+    """
     expanded_map = {}
     for path, suffix in model_suffix_map.items():
         if os.path.isdir(path):
+            # 遍历目录下所有 json 和 model 文件
+            # files = glob.glob(os.path.join(path, "**/*.json"), recursive=True) \
+            #       + glob.glob(os.path.join(path, "**/*.model"), recursive=True)
             files = glob.glob(os.path.join(path, "**/*.json"), recursive=True) \
-                  + glob.glob(os.path.join(path, "**/*.model"), recursive=True)
+                    + glob.glob(os.path.join(path, "**/*.model"), recursive=True) \
+                    + glob.glob(os.path.join(path, "**/*.pt"), recursive=True)
             for f in files:
                 base = os.path.basename(f)
                 name, _ = os.path.splitext(base)
-                expanded_map[f] = name
+                expanded_map[f] = name   # 文件路径 → 文件名
         else:
+            # 如果本身就是文件，保持不变
             expanded_map[path] = suffix if suffix else os.path.splitext(os.path.basename(path))[0]
     return expanded_map
 
 
 if __name__ == "__main__":
     model_suffix_map = {
-        "KCAT/kcat_1": "fold_1",
-        "KCAT/kcat_2": "fold_2",
-        "KCAT/kcat_3": "fold_3",
-        "KCAT/kcat_4": "fold_4",
-        "KCAT/kcat_5": "fold_5",
-        "KCAT/kcat_6": "fold_6",
-        "KCAT/kcat_7": "fold_7",
-        "KCAT/kcat_8": "fold_8",
-        "KCAT/kcat_9": "fold_9",
-        "KCAT/kcat_10": "fold_10",
+        "kcat_1.pt": "fold_1",
+        "kcat_2.pt": "fold_2",
+        "kcat_3.pt": "fold_3",
+        "kcat_4.pt": "fold_4",
+        "kcat_5.pt": "fold_5",
+        "kcat_6.pt": "fold_6",
+        "kcat_7.pt": "fold_7",
+        "kcat_8.pt": "fold_8",
+        "kcat_9.pt": "fold_9",
+        "kcat_10.pt": "fold_10",
     }
+    # 2. 自动展开目录
     model_suffix_map = expand_model_paths(model_suffix_map)
-    parser = argparse.ArgumentParser(description="5_infer")
-    parser.add_argument("--model_paths", type=str, nargs='+', default=list(model_suffix_map.keys()))
-    parser.add_argument("--input_csv_path", type=str,default="/path/to/input.csv",)
-    parser.add_argument("--output_csv_path", type=str, default="/path/to/output.csv",)
-    parser.add_argument("--protein_feature_source", type=str, default="extract", choices=["extract", "lmdb"])
-    parser.add_argument("--protein_type", type=str, default="ESMC_T5_ESM2",)
-    parser.add_argument("--smile_type", type=str, default="MoleBERT_unimolv2_morgan",)
+    parser = argparse.ArgumentParser(description="5_infer_推理新条目")
+    parser.add_argument("--model_paths", type=str, nargs='+', default=list(model_suffix_map.keys()),
+                        help="模型文件路径列表")
+    parser.add_argument("--input_csv_path",
+                        type=str,
+                        default="/path/to/input_csv.csv",
+                        help="输入 csv 路径")
+    parser.add_argument("--output_csv_path",
+                        type=str,
+                        default="/path/to/output_csv.csv",
+                        help="输出 csv 路径")
+    parser.add_argument("--protein_feature_source", type=str, default="extract", choices=["extract", "lmdb"],
+                        help="蛋白质特征来源，extract=自己提取，lmdb=从LMDB文件读取，默认 = extract")
+    parser.add_argument("--protein_type", type=str, default="ESMC_T5_ESM2", help="蛋白质特征类型，默认 = ESMC_T5_ESM2")
+    parser.add_argument("--smile_type", type=str, default="MoleBERT", help="小分子特征类型，默认 = MoleBERT_unimolv2_morgan")
     parser.add_argument("--smile_feature_source", type=str, default="extract", choices=["extract", "lmdb"])
-    parser.add_argument("--molebert_dataset_root", type=str, default="/share/home/qiujh/science/tools/DLenzyme/202606/5_infer/molebert/1_dataset/0_check/test")
-    parser.add_argument("--molebert_lmdb_path", type=str, default="/share/home/qiujh/science/tools/DLenzyme/202606/5_infer/molebert/0_check/2_lmdb/test")
+    parser.add_argument("--molebert_dataset_root", type=str,
+                        default="")
+    parser.add_argument("--molebert_lmdb_path", type=str,
+                        default="")
     parser.add_argument("--molebert_device", type=int, default=2)
     parser.add_argument("--force_molebert", action="store_true")
     args = parser.parse_args()
+
     batch_jobs = [
         {
             "model_paths": list(model_suffix_map.keys()),
